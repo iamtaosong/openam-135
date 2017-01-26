@@ -1,8 +1,4 @@
-
-
-docker pull taosong/openam-135
-
-docker build -t taosong/openam-135 .
+ docker build -t taosong/openam-135 .
 
 docker run -d -h openam.example.com --name openam-135- -p 8080:8080 taosong/openam-135
 
