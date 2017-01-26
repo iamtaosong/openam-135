@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Policies PUBLIC "-//OpenSSO Policy Administration DTD//EN" "jar://com/sun/identity/policy/policyAdmin.dtd">
+<Policies>
+<Policy name="OIDCOAuth2ProviderPolicy" referralPolicy="false" active="true" >
+<Rule name="OAuth2ProviderRule">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="https://iam.example.com:8443/openam/oauth2/authorize?*" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+<Attribute name="OPTIONS" />
+<Value>allow</Value>
+</AttributeValuePair>
+<Attribute name="PUT" />
+<Value>allow</Value>
+</AttributeValuePair>
+<Attribute name="DELETE" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Subjects name="Subjects:1405436095789LSBpVk0=" description="">
+<Subject name="OAuth2ProviderSubject" type="AuthenticatedUsers" includeType="inclusive">
+</Subject>
+</Subjects>
+</Policy>
+</Policies>
